@@ -4,7 +4,7 @@ def calculate_discount(price, discount):
         return -1
 
     if discount < 0 or discount > 100:
-        print("Discount must be a value between 0 and 100")
+        print("Discount must be between 0 and 100")
         return -1
 
     discounted_price = round(price - (price * (discount / 100)), 2)
@@ -22,10 +22,10 @@ def test_calculate_discount_with_floats():
     assert calculate_discount(55.55, 22.5) == 43.05
 
 def test_calculate_discount_zero_discount():
-    assert calculate_discount(200, 0) == 200  
+    assert calculate_discount(100, 0) == 100  
 
 def test_calculate_discount_full_discount():
-    assert calculate_discount(75, 100) == 0
+    assert calculate_discount(10, 100) == 0
 
 def test_calculate_discount_invalid_inputs():
     assert calculate_discount("100", 20) == -1  

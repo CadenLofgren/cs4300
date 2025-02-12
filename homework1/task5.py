@@ -1,8 +1,9 @@
+
 favorite_books = [
-    ("The Lord of the Rings", "J.R.R. Tolkien"),
+    ("The Name of the Wind", "Patrick Rothfuss"),
+    ("1984", "George Orwell"),
+    ("The Martian", "Andy Weir"),
     ("Dune", "Frank Herbert"),
-    ("Harry Potter and the Sorcerer’s Stone", "J.K. Rowling"),
-    ("All Quiet on the Western Front", "Erich Maria Remarque"),
 ]
 
 
@@ -15,12 +16,15 @@ student_database = {
     "John Doe": 2
 }
 
+
 print("Student Database:", student_database)
+
 
 def test_favorite_books():
     assert len(favorite_books) >= 3 
     assert first_three_books == favorite_books[:3]  
-    assert favorite_books[0] == ("The Lord of the Rings", "J.R.R. Tolkien") 
+    assert favorite_books[1] == ("1984", "George Orwell") 
+
 
 def test_student_database():
     assert isinstance(student_database, dict)  
